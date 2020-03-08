@@ -69,9 +69,4 @@ String meses[] = {"janeiro", "fevereiro", "março",
         horas.setText(formatar(ho % 12) + ":" + formatar(mi) + ":" + formatar(se) + "");
         data.setText(diaSemana[ds - 1] + ", " + formatar(dia) + " de " + meses[mes] + " de " + ano + "");
     }
-
-    private String formatar(int num) {
-        DecimalFormat df = new DecimalFormat("00");
-        return df.format(num);
-    }
 }
