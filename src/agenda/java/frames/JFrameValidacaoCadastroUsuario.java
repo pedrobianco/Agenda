@@ -1,5 +1,7 @@
 package agenda.java.frames;
 
+import agenda.java.ValidarCriacaoUsuario;
+
 /**
  *
  * @author Pedro
@@ -77,10 +79,10 @@ public class JFrameValidacaoCadastroUsuario extends javax.swing.JFrame {
     }
 
     private void confirmarActionPerformed(java.awt.event.ActionEvent evt) {
-        
-    	
-    	
-    	
+    	String login = String.valueOf(login_txt);
+    	String senha = String.valueOf(senha_txt);
+        ValidarCriacaoUsuario validar = new ValidarCriacaoUsuario();
+        boolean validou = validar.validar(login, senha);
     }
 
     private javax.swing.JButton confirmar;
