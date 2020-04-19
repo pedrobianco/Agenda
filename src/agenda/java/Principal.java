@@ -64,12 +64,12 @@ public class Principal extends javax.swing.JFrame {
 		initComponents();
 		setSize(1360, 768);
 		setTitle("Agenda");
-	      setIconImage(icone());
+	    setIconImage(icone());
 	    }
 	    
 	    public Image icone() {
 	    	URL url = this.getClass().getResource("icone.jpg");
-	    	Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url); this.setIconImage(iconeTitulo);
+	    	Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url); 
 	    	return iconeTitulo;
 	    }
 
