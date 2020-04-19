@@ -1,4 +1,4 @@
-package agenda.java;
+package agenda.java.frames;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -19,7 +19,12 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
-public class Principal extends javax.swing.JFrame {
+import agenda.java.Agenda;
+import agenda.java.Agenda_DAO;
+import agenda.java.Horarios;
+import agenda.java.cadastro_usuario;
+
+public class JFramePrincipal extends javax.swing.JFrame {
 
 	/**
 	 * 
@@ -60,7 +65,7 @@ public class Principal extends javax.swing.JFrame {
 	/**
 	 * Creates new form Principal
 	 */
-	public Principal() {
+	public JFramePrincipal() {
 		initComponents();
 		setSize(1360, 768);
 		setTitle("Agenda");
@@ -420,7 +425,7 @@ public class Principal extends javax.swing.JFrame {
 	}// GEN-LAST:event_salvarActionPerformed
 
 	private void sairActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sairActionPerformed
-		Login ll = new Login();
+		JFrameLogin ll = new JFrameLogin();
 		ll.setVisible(true);
 		dispose();
 	}// GEN-LAST:event_sairActionPerformed

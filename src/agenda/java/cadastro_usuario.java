@@ -7,6 +7,8 @@ package agenda.java;
 
 import javax.swing.JOptionPane;
 
+import agenda.java.frames.JFramePrincipal;
+
 /**
  *
  * @author pedro
@@ -152,7 +154,7 @@ public class cadastro_usuario extends javax.swing.JFrame {
     private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
         dispose();
         
-        Principal pp = new Principal();
+        JFramePrincipal pp = new JFramePrincipal();
         pp.setVisible(true);
     }//GEN-LAST:event_voltarActionPerformed
 
