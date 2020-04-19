@@ -75,6 +75,11 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         jMenuItem1.setText("Cadastrar Usuario");
         jMenu1.add(jMenuItem1);
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+               cadastrarActionPerformed(evt);
+            }
+        });
 
         sair.setText("Sair");
         sair.addActionListener(new java.awt.event.ActionListener() {
@@ -82,11 +87,13 @@ public class JFrameLogin extends javax.swing.JFrame {
                 sairActionPerformed(evt);
             }
         });
+        
         jMenu1.add(sair);
 
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,6 +143,13 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         pack();
     }
+    
+    
+    private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+    	 JFrameValidacaoCadastroUsuario validacao = new JFrameValidacaoCadastroUsuario();
+         validacao.setVisible(true);
+    }
+    
     private void logarActionPerformed(java.awt.event.ActionEvent evt) {
     	ValidarLogin validar = new ValidarLogin();
     	String login = String.valueOf(login_txt.getText());
