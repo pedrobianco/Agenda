@@ -19,7 +19,7 @@ public class Agenda_DAO {
     Connection con;
     
     public Agenda_DAO(){
-        con = Conexao.getconnectionPacientes();
+        con = Conexao.getconnection();
     }
     
     public void inserir(Agenda a) {

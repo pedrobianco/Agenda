@@ -15,7 +15,7 @@ public class LoginDAO {
 	
 	public Usuarios consultaPorLogin(String login) {
 		Usuarios usu = new Usuarios();
-		conn = Conexao.getConnectionUsuarios();
+		conn = Conexao.getconnection();
 		try {
 			usu = this.consultaPorLogin(login, conn);
 		} finally {

@@ -74,7 +74,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
 	    
 	    public Image icone() {
 	    	URL url = this.getClass().getResource("icone.jpg");
-	    	Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url); 
+	    	Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url);
 	    	return iconeTitulo;
 	    }
 
