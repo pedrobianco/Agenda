@@ -174,12 +174,6 @@ public class Horarios extends javax.swing.JFrame {
             
     try {
             Agenda_DAO dd = new Agenda_DAO();
-            horarioss h = new horarioss();
-
-            h.setData(data_txt.getText());
-            h.setHora(hora_txt.getText());
-            h.setMedico(medico_txt.getText());
-            dd.inserir(h);
 
             JOptionPane.showMessageDialog(null, "Salvo com Sucesso!");
 

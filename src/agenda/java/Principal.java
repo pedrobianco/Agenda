@@ -1,36 +1,23 @@
 package agenda.java;
 
-import com.mysql.jdbc.Connection;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
-import static java.nio.file.Files.write;
+import java.sql.Connection;
 import java.sql.DriverManager;
-import static java.sql.DriverManager.getConnection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
-import static java.util.Optional.empty;
-import static java.util.OptionalDouble.empty;
-import static java.util.OptionalLong.empty;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static java.util.stream.Stream.empty;
+
 import javax.swing.JFileChooser;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.MaskFormatter;
 
 public class Principal extends javax.swing.JFrame {
 
@@ -77,7 +64,14 @@ public class Principal extends javax.swing.JFrame {
 		initComponents();
 		setSize(1360, 768);
 		setTitle("Agenda");
-	}
+	      setIconImage(icone());
+	    }
+	    
+	    public Image icone() {
+	    	URL url = this.getClass().getResource("icone.jpg");
+	    	Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(url); this.setIconImage(iconeTitulo);
+	    	return iconeTitulo;
+	    }
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
@@ -585,60 +579,18 @@ public class Principal extends javax.swing.JFrame {
 
 	}// GEN-LAST:event_alterarrr
 
-	private void telefone_txtActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_telefone_txtActionPerformed
-		// TODO add your handling code here:
-	}// GEN-LAST:event_telefone_txtActionPerformed
+	private void telefone_txtActionPerformed(java.awt.event.ActionEvent evt) {
+	}
 
-	private void nome_txtActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_nome_txtActionPerformed
-		// TODO add your handling code here:
-	}// GEN-LAST:event_nome_txtActionPerformed
+	private void nome_txtActionPerformed(java.awt.event.ActionEvent evt) {
+		
+	}
 
-	private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cadastrarActionPerformed
+	private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {
 		cadastro_usuario cd = new cadastro_usuario();
 		cd.setVisible(true);
 		dispose();
-	}// GEN-LAST:event_cadastrarActionPerformed
-
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-		// (optional) ">
-		/*
-		 * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-		 * look and feel. For details see
-		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-		 */
-		try {
-			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		// </editor-fold>
-
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new Principal().setVisible(true);
-			}
-		});
-
 	}
-
-	// Variables declaration - do not modify//GEN-BEGIN:variables
 	private javax.swing.JButton Salvar;
 	private javax.swing.JMenu agenda;
 	private javax.swing.JButton alterar;

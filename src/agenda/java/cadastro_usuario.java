@@ -5,7 +5,6 @@
  */
 package agenda.java;
 
-import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**

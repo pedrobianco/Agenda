@@ -5,9 +5,10 @@
  */
 package agenda.java;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +20,6 @@ public class cadastro_DAO {
     Connection con;
     
     public cadastro_DAO(){
-        con = conexao2.getconnection();
     }
     
     public void inserir(cadastro c) {

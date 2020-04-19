@@ -1,17 +1,12 @@
 package agenda.java;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.Statement;
+
 import javax.swing.JOptionPane;
-import agenda.java.Agenda;
-import static java.sql.DriverManager.getConnection;
-import javax.swing.table.DefaultTableModel;
-import agenda.java.Principal;
 
 /**
  *
@@ -24,7 +19,7 @@ public class Agenda_DAO {
     Connection con;
     
     public Agenda_DAO(){
-        con = Conexao.getconnection();
+        con = Conexao.getconnectionPacientes();
     }
     
     public void inserir(Agenda a) {
@@ -55,18 +50,7 @@ public class Agenda_DAO {
         }
         
     }
-        
-    public void inserir(horarioss h){
-        try{
-            PreparedStatement stmt = this.con.prepareStatement("INSERT INTO pacientes (data, hora, medico) VALUES (?, ?, ?)");
-            stmt.setString(1, h.getData());
-            stmt.setString(2, h.getHora());
-            stmt.setString(3, h.getMedico());
-            stmt.executeUpdate();
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao Inserir no banco!" + ex);
-        }
-        }
+
     
     public Agenda buscaporcodigo(int cod_pac){
              
